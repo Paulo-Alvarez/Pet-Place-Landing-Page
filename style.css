@@ -198,36 +198,35 @@
   }
   
  /* DEPOIMENTOS */
-.depoimentos-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px 40px; /* espaço extra para os botões nas laterais */
-    display: flex;
-    align-items: center; /* centraliza verticalmente o conteúdo */
-    height: auto; /* permite que a altura se ajuste ao conteúdo */
-    box-sizing: border-box;
-  }
-  
-  .depoimentos {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 400%; /* assumindo 4 depoimentos, ajuste conforme necessário */
-  }
-  
-  .depoimentos blockquote {
-    background-color: #fff;
-    padding: 25px;
-    margin: 0;
-    border-radius: 10px;
-    font-style: italic;
-    min-width: 100%;
-    flex-shrink: 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    box-sizing: border-box;
-  }
+ .depoimentos-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.depoimentos {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%;
+}
+
+.depoimentos blockquote {
+  background-color: #fff;
+  padding: 25px;
+  margin: 0;
+  border-radius: 10px;
+  font-style: italic;
+  min-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
   
   /* NAVEGAÇÃO */
   .nav-btn {
@@ -366,6 +365,41 @@
   @media (max-width: 480px) {
     .card {
       width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .depoimentos-container {
+        flex-direction: column;
+        padding: 10px;
+      }
+    
+      .depoimentos {
+        width: 100%;
+      }
+    
+      .depoimentos blockquote {
+        min-width: 100%;
+      }
+    
+      .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        z-index: 2;
+      }
+    
+      .left-btn {
+        left: 10px;
+      }
+    
+      .right-btn {
+        right: 10px;
+      }
     }
   
     .botao-whatsapp {
